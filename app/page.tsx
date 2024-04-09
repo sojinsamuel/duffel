@@ -1,9 +1,13 @@
 "use client";
 import { title, subtitle } from "@/components/primitives";
 // import SearchInput from "@/components/search";
-// import SquigglyLines from "@/components/markers/squiggly-lines";
+import SquigglyLines from "@/components/markers/squiggly-lines";
+// import SelectorPath from "@/components/select-path";
 import Auto from "@/components/autocomp";
-import SelectorPath from "@/components/select-path";
+import { DatePicker } from "@/components/date/picker";
+import { Tabs, Tab } from "@nextui-org/tabs";
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import TabSelector from "@/components/TabSelector";
 
 export default function Home() {
   return (
@@ -19,26 +23,28 @@ export default function Home() {
               <span className="relative">&nbsp;with</span>
             </span>
           </h1>
-          <h2 className={subtitle({ class: "mt-4" })}>
-            One Simple Search
-            {/* <SquigglyLines /> */}
-          </h2>
+          <h2 className={subtitle({ class: "mt-4" })}>One Simple Search</h2>
+          <SquigglyLines />
           {/* <div>
             
           </div> */}
         </div>
-        {/* <div className="flex justify-center items-center w-full"> */}
-        <Auto />
         {/* <div className="flex gap-14 mt-5 ">
           <SelectorPath
-            btnName="Journey type"
-            items={["one way", "return", "multicity"]}
+          btnName="Journey type"
+          items={["one way", "return", "multicity"]}
           />
           
           <SelectorPath
-            btnName="Class"
-            items={["economy", "business", "first class"]}
+          btnName="Class"
+          items={["economy", "business", "first class"]}
           />
+        </div> */}
+        <TabSelector />
+        {/* <Auto /> */}
+        {/* <div className=" w-[50%] flex justify-around items-center">
+          <DatePicker placeholder="Departure" />
+          <DatePicker placeholder="Return" />
         </div> */}
       </section>
     </div>

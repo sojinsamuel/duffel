@@ -1,64 +1,51 @@
 import React from "react";
 import { Autocomplete, AutocompleteItem } from "@nextui-org/autocomplete";
 import SearchInput from "./search";
-export const animals = [
+export const places = [
   {
-    label: "Cat",
-    value: "cat",
-    description: "The second most popular pet in the world",
+    label: "France",
+    value: "france",
+    description: "A country known for its art, culture, and cuisine",
   },
   {
-    label: "Dog",
-    value: "dog",
-    description: "The most popular pet in the world",
-  },
-  {
-    label: "Elephant",
-    value: "elephant",
-    description: "The largest land animal",
-  },
-  { label: "Lion", value: "lion", description: "The king of the jungle" },
-  { label: "Tiger", value: "tiger", description: "The largest cat species" },
-  {
-    label: "Giraffe",
-    value: "giraffe",
-    description: "The tallest land animal",
-  },
-  {
-    label: "Dolphin",
-    value: "dolphin",
-    description: "A widely distributed and diverse group of aquatic mammals",
-  },
-  {
-    label: "Penguin",
-    value: "penguin",
-    description: "A group of aquatic flightless birds",
-  },
-  {
-    label: "Zebra",
-    value: "zebra",
-    description: "A several species of African equids",
-  },
-  {
-    label: "Shark",
-    value: "shark",
+    label: "Tokyo",
+    value: "tokyo",
     description:
-      "A group of elasmobranch fish characterized by a cartilaginous skeleton",
+      "The capital city of Japan, known for its modern architecture and vibrant street life",
   },
   {
-    label: "Whale",
-    value: "whale",
-    description: "Diverse group of fully aquatic placental marine mammals",
+    label: "Heathrow Airport",
+    value: "heathrow",
+    description:
+      "One of the busiest airports in the world, located in London, UK",
   },
   {
-    label: "Otter",
-    value: "otter",
-    description: "A carnivorous mammal in the subfamily Lutrinae",
+    label: "Italy",
+    value: "italy",
+    description: "A country famous for its history, art, and food",
   },
   {
-    label: "Crocodile",
-    value: "crocodile",
-    description: "A large semiaquatic reptile",
+    label: "New York City",
+    value: "nyc",
+    description:
+      "The largest city in the United States, known for its diverse culture and iconic skyline",
+  },
+  {
+    label: "JFK International Airport",
+    value: "jfk",
+    description: "One of the primary airports serving New York City",
+  },
+  {
+    label: "Australia",
+    value: "australia",
+    description:
+      "A country known for its stunning landscapes, beaches, and unique wildlife",
+  },
+  {
+    label: "Sydney",
+    value: "sydney",
+    description:
+      "The largest city in Australia, famous for its iconic Opera House and Harbour Bridge",
   },
 ];
 
@@ -69,7 +56,7 @@ export default function Auto() {
         label="From"
         placeholder="Country, city or airport"
         className="max-w-xs"
-        defaultItems={animals}
+        defaultItems={places}
         size="md"
       >
         {(item) => (
@@ -80,7 +67,7 @@ export default function Auto() {
         label="To"
         placeholder="Country, city or airport"
         className="max-w-xs"
-        defaultItems={animals}
+        defaultItems={places}
         size="md"
       >
         {(anotherItem) => (
