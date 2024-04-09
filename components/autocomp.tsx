@@ -1,8 +1,6 @@
 import React from "react";
 import { Autocomplete, AutocompleteItem } from "@nextui-org/autocomplete";
 import SearchInput from "./search";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
 export const animals = [
   {
     label: "Cat",
@@ -66,13 +64,13 @@ export const animals = [
 
 export default function Auto() {
   return (
-    <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
+    <div className="flex w-full flex-wrap md:flex-nowrap gap-4 mx-auto justify-center items-center">
       <Autocomplete
         label="From"
         placeholder="Country, city or airport"
         className="max-w-xs"
         defaultItems={animals}
-        size="lg"
+        size="md"
       >
         {(item) => (
           <AutocompleteItem key={item.value}>{item.label}</AutocompleteItem>
@@ -83,7 +81,7 @@ export default function Auto() {
         placeholder="Country, city or airport"
         className="max-w-xs"
         defaultItems={animals}
-        size="lg"
+        size="md"
       >
         {(anotherItem) => (
           <AutocompleteItem key={anotherItem.value}>
@@ -91,18 +89,32 @@ export default function Auto() {
           </AutocompleteItem>
         )}
       </Autocomplete>
-      <Autocomplete
-        label="From"
+      {/* <Autocomplete
+        label="Depart"
         placeholder="Country, city or airport"
-        className="max-w-xs"
+        className="max-w-xs w-[220px]"
         defaultItems={[{ label: "", value: "" }]}
-        size="lg"
-        onClick={(e) => <Calendar />}
+        size="md"
+        onClick={(e) => console.log(e)}
+        value=""
       >
         {(item) => (
           <AutocompleteItem key={item.value}>{item.label}</AutocompleteItem>
         )}
       </Autocomplete>
+      <Autocomplete
+        label="Return"
+        placeholder="Country, city or airport"
+        className="max-w-xs w-[220px]"
+        defaultItems={[{ label: "", value: "" }]}
+        size="md"
+        onClick={(e) => console.log(e)}
+        value=""
+      >
+        {(item) => (
+          <AutocompleteItem key={item.value}>{item.label}</AutocompleteItem>
+        )}
+      </Autocomplete> */}
       {/* <SearchInput label="Depart" /> */}
     </div>
   );

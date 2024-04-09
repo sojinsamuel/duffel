@@ -1,8 +1,9 @@
 "use client";
 import { title, subtitle } from "@/components/primitives";
-import SearchInput from "@/components/search";
-import SquigglyLines from "@/components/markers/squiggly-lines";
+// import SearchInput from "@/components/search";
+// import SquigglyLines from "@/components/markers/squiggly-lines";
 import Auto from "@/components/autocomp";
+import SelectorPath from "@/components/select-path";
 
 export default function Home() {
   return (
@@ -28,8 +29,17 @@ export default function Home() {
         </div>
         {/* <div className="flex justify-center items-center w-full"> */}
         <Auto />
-        {/* <SearchInput label="Depart" /> */}
-        {/* </div> */}
+        {/* <div className="flex gap-14 mt-5 ">
+          <SelectorPath
+            btnName="Journey type"
+            items={["one way", "return", "multicity"]}
+          />
+          
+          <SelectorPath
+            btnName="Class"
+            items={["economy", "business", "first class"]}
+          />
+        </div> */}
       </section>
     </div>
   );
